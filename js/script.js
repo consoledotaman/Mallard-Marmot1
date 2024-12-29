@@ -30,9 +30,12 @@ function swiperAnimation() {
         spaceBetween: 100,
     });
 }
+document.getElementById("menu-icon").addEventListener("click", function () {
+    this.classList.toggle("active");
+});
 function menuAnimation() {
 
-    var menu = document.querySelector("nav h3")
+    var menu = document.getElementById("menu")
     var full = document.querySelector("#full-scr")
     var navimg = document.querySelector("nav img")
     var flag = 0
@@ -42,7 +45,7 @@ function menuAnimation() {
             navimg.style.opacity = 0
             flag = 1
         } else {
-            full.style.top = "-100%"
+            full.style.top = "-200%"
             navimg.style.opacity = 1
             flag = 0
         }
@@ -178,3 +181,4 @@ tl
     stagger:2,
     top:"-100%"
 },'a')
+
