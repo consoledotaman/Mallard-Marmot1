@@ -26,7 +26,7 @@ html, body {
 }
 .menu-links {
   position:absolute;
-  margin-top: 20%;
+  margin-top: 24%;
   width:90%;
   margin-left: 5%;
   text-align: left;
@@ -574,6 +574,7 @@ input[type="checkbox"]:checked + label:hover {
     
 }
 
+
 .foot-bottom-left{
     position: absolute;
     bottom:0;
@@ -659,6 +660,19 @@ input[type="checkbox"]:checked + label:hover {
   .footer-in{
       position: relative;
   }
+  .socialicons-foot i{
+    color:#adff2f;
+    font-size: 5vw;
+    
+}
+.socialicons-foot {
+    border:.5px solid #adff2f;
+    height:8vw;
+    width:8vw;
+}
+.social-foot{
+    margin-top: 1vw;
+}
   
 
   
@@ -735,4 +749,37 @@ input[type="checkbox"]:checked + label:hover {
   .form-group{
     flex-direction: column;
   }
+}
+
+@media (max-width:600px){
+  nav {
+    width:100%;
+    
+    
+    
+    padding:3vh 0vw;
+    
+    
+    
+
+    
+}
+
+.nav-bar{
+    height:16vmin;
+    padding: 2vw 2vw;
+    width: 90%;
+    border-radius: 20px;
+    margin-top:5vw;
+}
+
+
+
+#nav-part2 {
+    display: none;
+}
+#page10{
+  padding-block:2px;
+}
+
 }

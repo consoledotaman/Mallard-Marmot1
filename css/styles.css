@@ -55,7 +55,7 @@ nav {
     /* background-color: red; */
     display: flex;
     align-items: center;
-    position: relative;
+    
     z-index: 100;
     justify-content: space-between;
     height:12vmin;
@@ -64,7 +64,9 @@ nav {
     
     border-radius: 20px;
     box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
-
+    position: fixed;
+    top:0;
+    margin-top: 2vw;
 }
 
 nav img{
@@ -224,13 +226,16 @@ nav img{
     }
 }
 .pg1-logodiv{
-    width:97%;
-    background-color: #000;
+    width:60%;
+    background-color: #fff;
     margin-top: 5px;
     display: none;
+    object-fit:cover;
 }
 .pg1-logodiv  img{
-    width:100%
+    width:100%;
+    object-fit:cover;
+    
 }
 .quote-div1{
     margin-top:5vh;
@@ -738,7 +743,7 @@ nav img{
 .text{
     width:fit-content;
     height:250px;
-    width:460px;
+    width:520px;
     overflow: hidden;
     bottom:15%;
     left:-10%;
@@ -919,7 +924,7 @@ nav img{
   }
   .menu-links {
     position:absolute;
-    margin-top: 20%;
+    margin-top: 24%;
     width:90%;
     margin-left: 5%;
     text-align: left;
@@ -1011,22 +1016,15 @@ nav img{
     
     nav {
         width:100%;
-        
-        
-        
-        padding:3vh 0vw;
-        
-        
-        
-    
-        
+        padding:3vh 0vw;   
     }
     
     .nav-bar{
-    
-        padding: 2vw 0vw;
+        height:16vmin;
+        padding: 2vw 2vw;
         width: 90%;
         border-radius: 20px;
+        margin-top:5vw;
     }
     
     
@@ -1035,20 +1033,11 @@ nav img{
         display: none;
     }
 
-    nav h3 {
-        display: block;
-        padding: 3vw 5vw;
-        border: 1px solid #ababab;
-        border-radius: 50px;
-        font-size: 4vw;
-        font-weight: 200;
-        padding-left: 10vw;
-    }
     
     #center {
         height: 80vh;
         width: 97%;
-        margin-top:10vw;
+        margin-top:15vw;
         position: relative;
         
         
@@ -1062,16 +1051,20 @@ nav img{
         padding:1vh 2vh ;
         
     }
-    
+    .avail-new-projects h3{
+        
+        font-size:4vw;
+        
+    }
     
     
     .quote-div1{
-        margin-top:10vw;
+        margin-top:17vw;
         width:90%;
         text-align:center;
     }
     .quote-div1 h1{
-        font-size: 8vw;
+        font-size: 7vw;
     
     }
     .logo-text{
@@ -1336,7 +1329,7 @@ nav img{
     .text{
         width:fit-content;
         height:60px;
-        width:100px;
+        width:200px;
         overflow: hidden;
         bottom:15%;
         left:-10%;
@@ -1964,7 +1957,7 @@ nav img{
     }
 
 }
-@media (max-width:500px){
+@media (max-width:600px){
     .foot-upper{
         flex-direction: column;
         align-items: flex-start;
@@ -2002,7 +1995,9 @@ nav img{
     .footer-in{
         position: relative;
     }
-    
+    #page10{
+        padding-block:2px;
+    }
 
     
     #moving-text-foot h1 {
@@ -2010,7 +2005,7 @@ nav img{
         color:#fffffff1;
         display: inline-block;
         
-        margin-top: 40%;
+        margin-top: 35%;
     
     }
     .foot-bottom-right h5{
@@ -2034,6 +2029,19 @@ nav img{
         margin-bottom:8%;
 
     }
+    .socialicons-foot i{
+        color:#adff2f;
+        font-size: 5vw;
+        
+    }
+    .socialicons-foot {
+        border:.5px solid #adff2f;
+        height:8vw;
+        width:8vw;
+    }
+    .social-foot{
+        margin-top: 1vw;
+    }
 }
 @media (max-width:800px){
     #menu {
@@ -2049,11 +2057,80 @@ nav img{
     }
     #menu i{
         font-size: 6vw;
-        margin:4px
+        margin:4px;
     }
     #nav-part2 {
         display: none;
     }
 }
 
+/*
+@media only screen and (max-width: 600px) and (min-width: 470px) {
+    .foot-logo{
+        width:70%;
 
+    }
+    .foot-div ul li{
+        font-size:2vw;
+    }
+    .address-foot p,.contact-num p, .email-foot p{
+        font-size:2vw;
+        margin:1vw 2vw;
+        
+    }
+    .location-foot i,.contact-num i, .email-foot i{
+        font-size:3vw;
+        margin:0vw;
+    }
+    .foot-div h3{
+        font-size:3vw;
+    }
+    .foot-div ul li{
+        font-size:2vw;
+    }
+    #moving-text-foot h1 {
+        font-size: 10vw;
+        
+        
+        margin-top: 27%;
+    
+    }
+}
+@media only screen and (max-width: 470px) and (min-width: 350px) {
+    .foot-logo{
+        width:70%;
+
+    }
+    .foot-div ul li{
+        font-size:3vw;
+    }
+    .address-foot p,.contact-num p, .email-foot p{
+        font-size:2vw;
+        margin:1vw 2vw;
+        
+    }
+    .location-foot i,.contact-num i, .email-foot i{
+        font-size:3vw;
+        margin:0vw;
+    }
+    .foot-div h3{
+        font-size:3vw;
+    }
+    .foot-div ul li{
+        font-size:2vw;
+    }
+    #moving-text-foot h1 {
+        font-size: 10vw;
+        
+        
+        margin-top: 27%;
+    
+    }
+}
+    */
+
+@media (max-width:600px) and (min-width:450px){
+    #center{
+        margin-top:20vw;
+    }
+}

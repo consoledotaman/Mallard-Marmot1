@@ -78,7 +78,7 @@ page1.addEventListener('wheel', (event) => {
 });
 
 
-
+/*
 const navBar = document.querySelector('.nav-bar');
 const maxScroll = 300; // Maximum scroll range to complete width reduction
 
@@ -87,7 +87,7 @@ window.addEventListener('scroll', () => {
     const newWidth = 100 - (scrollY / maxScroll) * 30; // Calculate width (linear interpolation)
     navBar.style.width = `${Math.max(70, newWidth)}%`; // Ensure minimum width is 70%
 });
-
+*/
 
 
 // Select the elements

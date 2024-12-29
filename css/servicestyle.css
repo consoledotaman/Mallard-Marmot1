@@ -26,7 +26,7 @@ html, body {
   }
   .menu-links {
     position:absolute;
-    margin-top: 20%;
+    margin-top: 24%;
     width:90%;
     margin-left: 5%;
     text-align: left;
@@ -515,10 +515,11 @@ nav img{
     }
     
     .nav-bar{
-    
-        padding: 2vw 0vw;
+        height:16vmin;
+        padding: 2vw 2vw;
         width: 90%;
         border-radius: 20px;
+        margin-top:5vw;
     }
     
     
@@ -563,7 +564,19 @@ nav img{
         
         padding-top:5.5vmax ;
     }
-
+    .socialicons-foot i{
+        color:#adff2f;
+        font-size: 5vw;
+        
+    }
+    .socialicons-foot {
+        border:.5px solid #adff2f;
+        height:8vw;
+        width:8vw;
+    }
+    .social-foot{
+        margin-top: 1vw;
+    }
     
 }
 
@@ -606,7 +619,9 @@ nav img{
         position: relative;
     }
     
-
+    #page10{
+        padding-block:2px;
+    }
     
     #moving-text-foot h1 {
         font-size: 12vw;
