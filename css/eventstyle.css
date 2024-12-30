@@ -197,7 +197,7 @@ nav img{
 
 .service-top{
     background-color: #f5f5f5;
-    width:100vw;
+    width:100%;
 }
 .service-top h2{
     padding-top: 8vmax;
@@ -269,7 +269,7 @@ nav img{
 */
 
 #page1{
-    width:100vw;
+    width:100%;
     height: 100vh;
     background-color: #f5f5f5;
     position:relative;
@@ -285,7 +285,7 @@ nav img{
     
     position: absolute;
     
-    left:20%;
+    left:15%;
     top:50%;
     transform: translate(0%,-50%);
 
@@ -310,6 +310,7 @@ nav img{
     left:-15%;
     z-index:12;
     position: absolute;
+    display:none;
 
 }
 .text h1{
@@ -320,7 +321,7 @@ nav img{
 
 #page-event{
     min-height:100vh;
-    width:100vw;
+    width:100%;
     
     background-color: #f5f5f5;
 
@@ -328,7 +329,7 @@ nav img{
 
 .page2-in{
     
-    width:100vw;
+    width:100%;
     background-color: #f5f5f5;
     border-radius:3vw;
     display:flex;
@@ -370,7 +371,7 @@ nav img{
     bottom: 20px;
     left:2vw;
     
-    
+    z-index:1;
     
     text-align: center;
     padding: 10px;
@@ -383,11 +384,13 @@ nav img{
     text-align: center;
     color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    width:15vw;
+    
 }
-  
+.overlay h3{
+    z-index:3;
+}
 .event-tag{
-    width:100vw;
+    width:100%;
 }
 .event-tag h2{
     padding-top: 8vmax;
@@ -408,7 +411,7 @@ nav img{
 #footer{
     margin-top: 5vw;
     min-height:100vh;
-    width:100vw;
+    width:100%;
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
@@ -471,7 +474,7 @@ nav img{
     width: 60px;
     border-radius: 50%;
     display: inline-block;
-    background-color: rgb(63, 182, 63);
+    background-color: #8ccc3c;
     margin: 1vw 2vw;
 }
 
@@ -548,21 +551,21 @@ nav img{
     height:4vw;
     width:4vw;
     border-radius: 50%;
-    border:2px solid #adff2f;
+    border:2px solid #8ccc3c;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
 }
 .socialicons-foot:hover{
-    background-color: #adff2f;
+    background-color: #8ccc3c;
     
 }
 .socialicons-foot:hover.socialicons-foot i{
     color:#161616;
 }
 .socialicons-foot i{
-    color:#adff2f;
+    color:#8ccc3c;
     font-size: 2.2vw;
     
 }
@@ -639,12 +642,12 @@ nav img{
         margin: 1vw 1vw;
     }
     .socialicons-foot i{
-        color:#adff2f;
+        color:#8ccc3c;
         font-size: 5vw;
         
     }
     .socialicons-foot {
-        border:.5px solid #adff2f;
+        border:.5px solid #8ccc3c;
         height:8vw;
         width:8vw;
     }
@@ -668,7 +671,7 @@ nav img{
         color:#fffffff1;
         display: inline-block;
         
-        margin-top: 40%;
+        margin-top: 37%;
     
     }
     .foot-bottom-right h5{
@@ -739,9 +742,6 @@ nav img{
       border-radius: 20px;
       margin-top:5vw;
   }
-  
-  
-  
   #nav-part2 {
       display: none;
   }
@@ -758,6 +758,7 @@ nav img{
     left:-20%;
     z-index:12;
     position: absolute;
+    display:none;
 
 }
 .text h1{
@@ -768,4 +769,27 @@ nav img{
 #page10{
     padding-block:2px;
 }
+  .service-top h2 {
+    font-size: 10vw;
+  }
+  .service-top p {
+    font-size:4vw;
+  }
+  .event-tag h2{
+    font-size:6vw;
+  }
+  .event-tag p{
+    font-size:3vw;
+  }
+  .overlay {
+    
+    bottom: 2vw;
+    left:2vw;
+    
+    font-size: 2vw;
+    border-radius: 3vw; /* Optional: rounded corners */
+    padding: 1vw 2vw;
+    backdrop-filter: none;
+}
+  
 }

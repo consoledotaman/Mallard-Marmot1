@@ -22,6 +22,12 @@ tl
     top:"-100%"
 },'a')
 
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+
 function menuAnimation() {
 
     var menu = document.getElementById("menu")

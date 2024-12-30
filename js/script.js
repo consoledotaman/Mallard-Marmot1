@@ -56,13 +56,15 @@ function loaderAnimation() {
     var loader = document.querySelector("#loader")
     setTimeout(function () {
         loader.style.top = "-100%"
-    }, 4200)
+    }, 2000)
 }
 
 swiperAnimation()
 page10Animation()
 menuAnimation()
 loaderAnimation()
+
+
 
 const centerDiv = document.querySelector('#center');
 const page1 = document.querySelector('#page1');

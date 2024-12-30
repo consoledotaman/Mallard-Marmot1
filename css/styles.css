@@ -259,7 +259,7 @@ nav img{
     margin-top:0.5vw;
     width:.7vw;
     height:.7vw;
-    background-color: rgb(63, 182, 63);
+    background-color: #8ccc3c;
     border-radius: 50%;
     margin-inline: 1vw;
 }
@@ -270,7 +270,7 @@ nav img{
 }
 /*
 .start-btn{
-    background-color: rgb(63, 182, 63);
+    background-color: #8ccc3c;
     display: flex;
     align-items: center;
     padding: 1.5vw 2.5vw;
@@ -298,7 +298,7 @@ nav img{
 */
 
 .start-btn {
-    background-color: #31cb31;
+    background-color: #8ccc3c;
     display: flex;
     align-items: center;
     padding: 1.5vw 2.5vw;
@@ -510,7 +510,7 @@ nav img{
     width: 50px;
     border-radius: 50%;
     display: inline-block;
-    background-color: rgb(63, 182, 63);
+    background-color: #8ccc3c;
     margin: 1vw 2vw;
 }
 
@@ -620,7 +620,7 @@ nav img{
     color:#fff;
 }
 .page3-top span{
-    color:#36e936;
+    color:#8ccc3c;
 }
 
 .about-us{
@@ -671,7 +671,7 @@ nav img{
 .elem .overlay {
     height: 100%;
     width: 100%;
-    background-color: #24ca24;
+    background-color: #8ccc3c;
     position: absolute;
     left: 0;
     top: -100%;
@@ -838,6 +838,7 @@ nav img{
     align-items: center;
     margin:3vw 3vw;
 }
+
 #vm-event{
     background-color: #fff;
     color:#000;
@@ -1091,7 +1092,7 @@ nav img{
     }
     
     .start-btn {
-        background-color: #31cb31;
+        background-color: #8ccc3c;
         display: flex;
         align-items: center;
         padding: 1.5vh 2.5vh;
@@ -1413,7 +1414,7 @@ nav img{
     position: fixed;
     z-index: 999;
     top: 0;
-    transition: all ease 0.7s;
+    transition: all ease 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1422,21 +1423,22 @@ nav img{
 #loader h1{
     font-size: 4vw;
     color: transparent;
-    background: linear-gradient(to right,orange,orangered);
+    background: linear-gradient(to right,#8ccc3c,#bde28b);
     -webkit-background-clip: text;
     position: absolute;
     opacity: 0;
     animation-name: load;
-    animation-duration: 1s;
-    animation-delay: 1s;
+    animation-duration: .5s;
+    animation-delay: .3s;
     animation-timing-function: linear;
 }
 #loader h1:nth-child(2){
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 #loader h1:nth-child(3){
-    animation-delay: 3s;
+    animation-delay: 1.5s;
 }
+
 
 @keyframes load {
     0%{
@@ -1610,6 +1612,49 @@ nav img{
     color: rgb(50, 196, 50);
     font-size: 3vw;
 }
+.p7-bottom2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+}
+.service-viewmore{
+    height:3vw;
+    padding:2vw;
+    border-radius:3vw;
+    
+    display:flex;
+    align-items: center;
+    margin:3vw 3vw;
+    background-color: #000;
+
+}
+.service-viewmore p{
+    font-size:1.3vw;
+    font-weight: 500;
+    margin-inline:0.6vw;
+    text-decoration: none;
+    color:#fff;
+}
+.arrow-div4{
+    height:2.8vw;
+    width:2.8vw;
+    border-radius:50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #fff;
+    color:#000;
+    position: relative;
+}
+.arrow-div4 i{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
 
 #page8{
     height:100vh;
@@ -1749,7 +1794,7 @@ nav img{
     width: 60px;
     border-radius: 50%;
     display: inline-block;
-    background-color: rgb(63, 182, 63);
+    background-color: #8ccc3c;
     margin: 1vw 2vw;
 }
 
@@ -1825,21 +1870,21 @@ nav img{
     height:4vw;
     width:4vw;
     border-radius: 50%;
-    border:2px solid #adff2f;
+    border:2px solid #8ccc3c;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
 }
 .socialicons-foot:hover{
-    background-color: #adff2f;
+    background-color: #8ccc3c;
     
 }
 .socialicons-foot:hover.socialicons-foot i{
     color:#161616;
 }
 .socialicons-foot i{
-    color:#adff2f;
+    color:#8ccc3c;
     font-size: 2.2vw;
     
 }
@@ -1935,11 +1980,11 @@ nav img{
     .p5-e-top p{
         font-size: 1.5vh;
     }
-    .e-viewmore p{
+    .e-viewmore p , .service-viewmore p{
         font-size:1.2vh;
         
     }
-    .e-viewmore{
+    .e-viewmore , .service-viewmore{
         
         height:3vh;
         padding:1vh;
@@ -1949,8 +1994,9 @@ nav img{
         
     }
 
-    .arrow-div3 i{
+    .arrow-div3 i, .arrow-div4 i{
         font-size:1vh;
+        text-decoration: none;
     }
     #page8{
         height:30vh;
@@ -2005,7 +2051,7 @@ nav img{
         color:#fffffff1;
         display: inline-block;
         
-        margin-top: 35%;
+        margin-top: 37%;
     
     }
     .foot-bottom-right h5{
@@ -2030,12 +2076,12 @@ nav img{
 
     }
     .socialicons-foot i{
-        color:#adff2f;
+        color:#8ccc3c;
         font-size: 5vw;
         
     }
     .socialicons-foot {
-        border:.5px solid #adff2f;
+        border:.5px solid #8ccc3c;
         height:8vw;
         width:8vw;
     }

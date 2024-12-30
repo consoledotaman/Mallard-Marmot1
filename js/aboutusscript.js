@@ -11,17 +11,22 @@ const plusCrossDiv1=document.getElementById('plus-crossdiv1');
 const plusCrossDiv2=document.getElementById('plus-crossdiv2');
 const plusCrossDiv3=document.getElementById('plus-crossdiv3');
 
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('#main'),
+  smooth: true
+});
 aboutDiv1.addEventListener('click',()=>{
     
     aboutPara1.style.display = aboutPara1.style.display === 'block' ? 'none' : 'block';
     if (plusCross1.classList.contains('fa-plus')) {
         plusCross1.classList.remove('fa-plus');
         plusCross1.classList.add('fa-xmark');
-        plusCrossDiv1.style.backgroundColor="#47f547";
+        plusCrossDiv1.style.backgroundColor="#FFF";
     } else if (plusCross1.classList.contains('fa-xmark')) {
         plusCross1.classList.remove('fa-xmark');
         plusCross1.classList.add('fa-plus');
-        plusCrossDiv1.style.backgroundColor="#fff";
+        plusCrossDiv1.style.backgroundColor="#8ccc3c";
     }
     
 
@@ -37,7 +42,7 @@ aboutDiv2.addEventListener('click',()=>{
     } else if (plusCross2.classList.contains('fa-xmark')) {
         plusCross2.classList.remove('fa-xmark');
         plusCross2.classList.add('fa-plus');
-        plusCrossDiv2.style.backgroundColor="#47f547";
+        plusCrossDiv2.style.backgroundColor="#8ccc3c";
     }
 });
 aboutDiv3.addEventListener('click',()=>{
@@ -46,11 +51,11 @@ aboutDiv3.addEventListener('click',()=>{
     if (plusCross3.classList.contains('fa-plus')) {
         plusCross3.classList.remove('fa-plus');
         plusCross3.classList.add('fa-xmark');
-        plusCrossDiv3.style.backgroundColor="#47f547";
+        plusCrossDiv3.style.backgroundColor="#fff";
       } else if (plusCross3.classList.contains('fa-xmark')) {
         plusCross3.classList.remove('fa-xmark');
         plusCross3.classList.add('fa-plus');
-        plusCrossDiv3.style.backgroundColor="#fff";
+        plusCrossDiv3.style.backgroundColor="#8ccc3c";
       }
 });
     const hoverBoxes = document.querySelectorAll('.right-in');

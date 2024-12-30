@@ -1,66 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu to Cross</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* styles.css */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  margin: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Loader</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
 
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40px;
-  height: 30px;
-  cursor: pointer;
-  position: relative;
-}
+        .logo-container {
+            position: fixed;
+            transition: all 0.8s ease-in-out;
+            /* Center position by default */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-.bar {
-  width: 100%;
-  height: 5px;
-  background-color: #333;
-  border-radius: 3px;
-  transition: 0.3s ease-in-out;
-}
+        .logo {
+            width: 150px; /* Adjust based on your logo size */
+            height: auto;
+        }
 
-.menu-icon.active .bar:nth-child(1) {
-  transform: translateY(12px) rotate(45deg);
-}
+        /* Loading animations */
+        @keyframes float {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+            50% {
+                transform: translate(-50%, -60%); /* Float up by 10px */
+            }
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
 
-.menu-icon.active .bar:nth-child(2) {
-  opacity: 0;
-}
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 
-.menu-icon.active .bar:nth-child(3) {
-  transform: translateY(-12px) rotate(-45deg);
-}
+        /* Apply animations during loading */
+        .logo-container:not(.loaded) {
+            animation: float 2s ease-in-out infinite;
+        }
 
-  </style>
+        .logo-container:not(.loaded) .logo {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Class to move logo to top-left */
+        .logo-container.loaded {
+            left: 20px;
+            top: 20px;
+            transform: translate(0, 0);
+            /* Stop animations when loaded */
+            animation: none;
+        }
+
+        /* Make logo smaller after loading */
+        .logo-container.loaded .logo {
+            width: 100px; /* Smaller size for header */
+            animation: none; /* Stop pulse animation */
+        }
+
+        /* Hide the main content during loading */
+        .main-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .main-content.loaded {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-  <div class="menu-icon" id="menu-icon">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+    <div class="logo-container">
+        <!-- Replace src with your logo path -->
+        <img src="/path-to-your-logo.png" alt="Logo" class="logo">
+    </div>
 
-  <script >
-    // script.js
-document.getElementById("menu-icon").addEventListener("click", function () {
-  this.classList.toggle("active");
-});
+    <div class="main-content">
+        <!-- Your website content goes here -->
+        <h1>Welcome to My Website</h1>
+        <p>This is the main content of the website.</p>
+    </div>
 
-  </script>
+    <script>
+        // Simulate loading time (remove this in production)
+        setTimeout(() => {
+            // Add loaded class to move logo
+            document.querySelector('.logo-container').classList.add('loaded');
+            
+            // Show main content
+            document.querySelector('.main-content').classList.add('loaded');
+        }, 3000); // 3 seconds loading time
+
+        // In production, you might want to use this instead:
+        /*
+        window.addEventListener('load', () => {
+            document.querySelector('.logo-container').classList.add('loaded');
+            document.querySelector('.main-content').classList.add('loaded');
+        });
+        */
+    </script>
 </body>
 </html>
