@@ -475,10 +475,12 @@ nav img{
     
 }
 #page4 {
-    margin-top: 10vmin;
+    
+    padding:4vw 0vw;
+    padding-top: 10vmin;
     width: 100%;
     background-color: #F5F5F5;
-    padding: 4vw 0;
+    
 }
 #page4-after{
     width:100vw;
