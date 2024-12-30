@@ -366,11 +366,11 @@ nav img{
 }
 
 #page3{
-    
+    padding-top: 10vmin;
     width:100%;
     background-color: #f5f5f5;
     display:flex;
-    
+    align-items: center;
     justify-content: center;
 }
 .page3-in{
@@ -389,7 +389,7 @@ nav img{
     
     width:30vw;
     height:auto;
-    object-fit: contain;
+    object-fit: cover;
     background-color: #a09898;
     overflow: hidden;
     position: relative;
@@ -475,10 +475,11 @@ nav img{
     
 }
 #page4 {
-    margin-top: 10vmin;
+    
+    padding: 5vw 0;
     width: 100%;
     background-color: #F5F5F5;
-    padding: 4vw 0;
+    
 }
 #page4-after{
     width:100vw;
@@ -493,7 +494,7 @@ nav img{
     justify-content: center;
     text-align: center;
     
-    background-color: #000;
+    background-color: #f5f5f5;
     border-radius:3vw;
     margin-left:7.5vw;
     
@@ -544,7 +545,9 @@ nav img{
     border-radius:3vw;
     
 }
-
+#elem1{
+    margin-top:10vmin;
+}
 .elem h2 {
     font-size: 3vw;
     position: relative;
@@ -566,13 +569,13 @@ nav img{
 }
 #page5{
     
-    min-height:100vh;
+    
     width:100%;
     background-color: #f5f5f5;
     
 }
 .p5-top{
-    margin-top: 5vw;;
+    padding-top: 5vw;;
 
 
 }
@@ -1119,5 +1122,58 @@ nav img{
         border-radius: 3vw; /* Optional: rounded corners */
         padding: 1vw 2vw;
         backdrop-filter: none;
+    }
+    .page3-in{
+
+        flex-direction: column;
+    }
+    
+    .founder-div , .manager-div{
+        width:70vw;
+        border-radius: 3vw;
+
+    }
+    .founder-div img , .manager-div img{
+        width:70vw;
+
+    }
+    .founder-name h2{
+        font-size:4vw;
+        padding-top: 1.2vw;
+        padding-right:2vw;
+        padding-left: 2vw;
+    }
+    .founder-name p{
+        padding-right:2vw;
+        margin-block: 1vw;
+        font-size: 3.5vw;
+    }
+    .founder-name{
+        border-top-right-radius: 3vw;  
+        border-bottom-left-radius:3vw;
+    }
+    .social-about{
+        margin:2vw;
+    }
+    .socialicons-about{
+        height:8vw;
+        width:8vw;
+        margin:.5vw;
+    }
+    .socialicons-about i{
+        font-size:5vw;
+    }
+    .socialicons-foot i{
+        color:#8ccc3c;
+        font-size: 5vw;
+        
+    }
+    .socialicons-foot {
+        border:.5px solid #8ccc3c;
+        height:8vw;
+        width:8vw;
+    }
+    .social-foot{
+        margin-top: 1vw;
     }
 }

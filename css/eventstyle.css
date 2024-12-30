@@ -781,12 +781,21 @@ nav img{
   .event-tag p{
     font-size:3vw;
   }
-  .overlay {
+  .page2-in{
+    flex-direction: column;
+  }
+  .flex-item{
+    width: 80%;
+    height: 47vw;
+
     
+}
+.overlay {
+
     bottom: 2vw;
     left:2vw;
     
-    font-size: 2vw;
+    font-size: 4vw;
     border-radius: 3vw; /* Optional: rounded corners */
     padding: 1vw 2vw;
     backdrop-filter: none;
