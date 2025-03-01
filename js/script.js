@@ -3,7 +3,7 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-
+/*
 function page10Animation() {
     var elemC = document.querySelector("#elem-container")
     var fixed = document.querySelector("#fixed-image")
@@ -22,7 +22,8 @@ function page10Animation() {
         })
     })
 }
-
+page10Animation()
+*/
 function swiperAnimation() {
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
@@ -60,7 +61,7 @@ function loaderAnimation() {
 }
 
 swiperAnimation()
-page10Animation()
+
 menuAnimation()
 loaderAnimation()
 
