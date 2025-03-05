@@ -208,7 +208,7 @@ nav img{
     margin-top: 12vmin;
     width:94%;
     height:40vmin;
-    background-color: #000000;
+    background-color: #f5f5f5;
     border-radius: 3vmax;
     display: flex;
     align-items: center;
@@ -218,7 +218,7 @@ nav img{
 }
 
 .p1-logo{
-    width:40%;
+    width:30%;
     height:70%;
     margin-bottom: 3vw;
     margin-left: 4vw;
@@ -236,16 +236,16 @@ nav img{
 }
 .welcome-div h1{
     
-    margin-left:3vw;
+    margin-left:2vw;
     font-size:6vw;
-    color:#fff;
+    color:#000;
     position:absolute;
     top:0;
     margin-top: 5vw;
 }
 .welcome-div h2{
     
-    margin-left:14vw;
+    margin-left:11vw;
     font-size:6vw;
     color:#8ccc3c;
     position:absolute;

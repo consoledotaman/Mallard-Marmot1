@@ -362,7 +362,7 @@ nav img{
     position: relative;
     height:100vh;
     border-radius:2vw;
-    background-color: #056646;
+    
     overflow: hidden;
     display:none;
 }
@@ -371,7 +371,7 @@ nav img{
     width:100%;
     object-fit:cover;
 }
-.page9-right video{
+.page2-right video{
     height:100%;
     width:100%;
     object-fit:cover;
@@ -732,13 +732,13 @@ nav img{
 
 
 #slide-container{
-    height:80%;
-    width:70%;
+    height:70%;
+    width:80%;
     
     
     position: absolute;
     
-    left:20%;
+    left:12%;
     top:50%;
     transform: translate(0%,-50%);
 
