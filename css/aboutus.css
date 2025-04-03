@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Merriweather", serif;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     
     font-style: normal;
 }
@@ -109,13 +111,13 @@ nav img{
 
 #nav-part2 h4 {
     padding: 10px 20px;
-    border: 1px solid #0000008d;
+    border: 1px solid #0000006c;
     border-radius: 50px;
-    font-weight: 500;
-    color: #000000;
+    font-weight: 400;
+    color: #000000ca;
     transition: all ease 0.4s;
     position: relative;
-    font-size: 18px;
+    font-size: 15px;
     overflow: hidden;
 }
 
@@ -206,8 +208,8 @@ nav img{
 
 .page1-in{
     margin-top: 12vmin;
-    width:94%;
-    height:40vmin;
+    width:65%;
+    height:fit-content;
     background-color: #f5f5f5;
     border-radius: 3vmax;
     display: flex;
@@ -218,10 +220,11 @@ nav img{
 }
 
 .p1-logo{
-    width:30%;
+    width:29%;
     height:70%;
     margin-bottom: 3vw;
     margin-left: 4vw;
+    margin-top: 2vw;
     
    
 
@@ -237,20 +240,20 @@ nav img{
 .welcome-div h1{
     
     margin-left:2vw;
-    font-size:6vw;
+    font-size:4.5vw;
     color:#000;
     position:absolute;
     top:0;
-    margin-top: 5vw;
+    margin-top: 3.5vw;
 }
 .welcome-div h2{
     
     margin-left:11vw;
-    font-size:6vw;
+    font-size:4.5vw;
     color:#8ccc3c;
     position:absolute;
     top:0;
-    margin-top: 9vw;
+    margin-top: 6vw;
 
 }
 
@@ -262,27 +265,28 @@ nav img{
 .about-company h2{
     
     margin-left:5vw;
-    font-size:5vw;
+    font-size:3.3vw;
     color:#000;
     
-    margin-top: 3vw;
+    margin-top: 1vw;
 
 }
 
 .about-left p{
-    margin-left:2vmax;
-    margin-top: 1vmax;
-    font-size: 2vw;
+    margin-left:1.4vmax;
+    margin-top: .8vmax;
+    font-size: 1.4vw;
+    line-height: 2vw;
     color:#000;
     
-    padding:3vw;
+    padding:2vw;
     
     
 }
 
 
 .about-left {
-    margin-top: 2vw;
+    margin-top: 1.5vw;
     width: 55vw;
     margin-left: 2vw;
     background-color: #fff; 
@@ -306,13 +310,13 @@ nav img{
     
     width:35vw;
    
-    margin-top: 11vw;
+    margin-top: 5vw;
 }
 
 .right-in{
-    background-color: #000000f0;
+    background-color: #000000e1;
     box-shadow: -5px 5px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 2vw;
+    border-radius: 1.4vw;
     margin-block:1vw;
     position:relative;
     overflow: hidden;
@@ -320,8 +324,8 @@ nav img{
     
 }
 .right-in h3{
-    margin-block: 2vw;
-    font-size: 2vw;
+    margin-block: 1vw;
+    font-size: 1.4vw;
     color:#fff;
     user-select: none;
 }
@@ -342,20 +346,32 @@ nav img{
     align-items: center;
 }
 .plus-cross{
-    height:4vw;
-    width:4vw;
+    height:3vw;
+    width:3vw;
     margin:1vw;
     box-shadow: -5px 5px 30px rgba(255, 255, 255, 0.5);
-    border-radius: 1.2vw;
+    border-radius: 1vw;
     display:flex;
     align-items: center;
     justify-content: center;
     user-select: none;
     background-color: #8ccc3c;
+    animation: scaleUpDown 2s  infinite ease-in-out ;
 
 }
+@keyframes scaleUpDown {
+    0% {
+      transform: scale(.8);
+    }
+    50% {
+      transform: scale(.9); 
+    }
+    100% {
+      transform: scale(.8);
+    }
+}
 .plus-cross i{
-    font-size: 2vw;
+    font-size: 1.4vw;
     color:#000;
 }
 
@@ -518,12 +534,12 @@ nav img{
     top:0;
     margin-left:7vw;
     margin-top: 2vw;
-    font-size: 5vw;
+    font-size: 4vw;
 }
 #elem-container{
     width:95%;
     background-color: #fff;
-    border-radius: 5vw;
+    border-radius: 4vw;
     overflow:hidden;
     margin-left:2.5vw;
 }
@@ -532,7 +548,7 @@ nav img{
     width:100%;
 }
 .elem {
-    height: 150px;
+    height: 100px;
     width: 90%;
     position: relative;
     margin-left:5vw;
@@ -542,14 +558,14 @@ nav img{
     align-items: center;
     padding: 0 2vw;
     background-color: #f5f5f5;
-    border-radius:3vw;
+    border-radius:2vw;
     
 }
 #elem1{
-    margin-top:10vmin;
+    margin-top:8vmin;
 }
 .elem h2 {
-    font-size: 3vw;
+    font-size: 2vw;
     position: relative;
     z-index: 9;
 }
@@ -580,7 +596,7 @@ nav img{
 
 }
 .p5-top h2{
-    font-size: 5vw;
+    font-size: 4vw;
     color:#000;
     margin-left: 5vw;;
 }

@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merriweather", serif;
-  
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
+  
 }
 html, body {
   height: 100%;
@@ -108,13 +110,13 @@ nav img{
 
 #nav-part2 h4 {
   padding: 10px 20px;
-  border: 1px solid #0000008d;
+  border: 1px solid #0000006c;
   border-radius: 50px;
-  font-weight: 500;
-  color: #000000;
+  font-weight: 400;
+  color: #000000ca;
   transition: all ease 0.4s;
   position: relative;
-  font-size: 18px;
+  font-size: 15px;
   overflow: hidden;
 }
 
@@ -211,6 +213,17 @@ nav img{
   padding-top: 6vw;
   background-color: #f5f5f5;
 }
+@keyframes alver {
+  0%{
+      
+      opacity: 0;
+  }
+  100% {
+  transform: translateY(0%) ;
+  opacity: 1;
+  }
+}
+
 .p1-center{
   text-align: center;
   display: flex;
@@ -218,13 +231,19 @@ nav img{
     align-items: center;
     flex-direction: column;
     margin-block: 3vw;
-
+    
 }
 .p1-center h2{
   font-size: 5vw;
+  transform:translateY(10vmax);
+    animation: alver 1.2s forwards .4s;
+    opacity:0;
 }
 .p1-para p{
   font-size: 1.3vw;
+  transform:translateY(15vmax);
+  animation: alver 1.5s forwards .4s;
+  opacity:0;
 }
 .p1-para{
   width:60%;
@@ -237,7 +256,9 @@ nav img{
     padding: 2vw;
     border-radius: 2vw;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-    
+    transform:translateY(10vmax);
+    animation: alver 1.2s forwards .4s;
+    opacity:0;
   }
   
   h2 {

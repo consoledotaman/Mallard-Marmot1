@@ -64,3 +64,22 @@ window.addEventListener('load', () => {
 document.getElementById("menu-icon").addEventListener("click", function () {
     this.classList.toggle("active");
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const flexes = document.querySelectorAll(".flex-item");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("show");
+                }, index * 300); 
+            }
+        });
+    }, { threshold: 0.3 });
+
+    flexes.forEach(flex => observer.observe(flex));
+});

@@ -35,23 +35,34 @@ document.getElementById("menu-icon").addEventListener("click", function () {
     this.classList.toggle("active");
 });
 function menuAnimation() {
+    var menu = document.getElementById("menu");
+    var full = document.querySelector("#full-scr");
+    var navimg = document.querySelector("nav img");
 
-    var menu = document.getElementById("menu")
-    var full = document.querySelector("#full-scr")
-    var navimg = document.querySelector("nav img")
-    var flag = 0
+    var flag = 0; 
+
     menu.addEventListener("click", function () {
-        if (flag == 0) {
-            full.style.top = 0
-            navimg.style.opacity = 0
-            flag = 1
+        if (flag === 0) {
+            full.style.top = "0";
+            navimg.style.opacity = "0";
+            flag = 1;
         } else {
-            full.style.top = "-200%"
-            navimg.style.opacity = 1
-            flag = 0
+            full.style.top = "-200%";
+            navimg.style.opacity = "1";
+            flag = 0;
         }
-    })
+    });
+
+    
+    full.addEventListener("click", function () {
+        full.style.top = "-200%"; 
+        navimg.style.opacity = "1";
+        flag = 0;
+    });
 }
+
+
+
 
 function loaderAnimation() {
     var loader = document.querySelector("#loader")
@@ -184,4 +195,32 @@ tl
     stagger:2,
     top:"-100%"
 },'a')
+
+
+
+// Add this script to your HTML file, preferably just before the closing </body> tag
+document.addEventListener('DOMContentLoaded', function() {
+    const centerDiv = document.getElementById('center');
+    let lastScrollTop = 0;
+    
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let scrollProgress = Math.min(scrollTop / 500, 1); // Adjust 500 to control the speed of the effect
+      
+      // Calculate scale (zoom) value between 1 and 0.7
+      // Start at 1 (normal size) and decrease to 0.7 (30% smaller) as we scroll down
+      let scale = 1 - (0.3 * scrollProgress);
+      
+      // Calculate opacity from 1 to 0
+      // Start at 1 (fully visible) and decrease to 0 (invisible) as we scroll
+      let opacity = 1 - scrollProgress;
+      
+      // Apply transformations
+      centerDiv.style.transform = `scale(${scale})`;
+      centerDiv.style.opacity = opacity;
+      
+      lastScrollTop = scrollTop;
+    });
+  });
+
 

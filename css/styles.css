@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Merriweather", serif;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     
     font-style: normal;
 }
@@ -18,19 +20,6 @@ html, body {
     z-index: 10;
 }
 
-#page1 {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #F5F5F5;
-    position: fixed;
-    padding: 0 2vw;
-    z-index:2;
-    top:0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
 
 nav {
     width:100%;
@@ -168,11 +157,30 @@ nav img{
   .menu-icon.active .bar:nth-child(3) {
     transform: translateY(-2vw) rotate(-45deg);
   }
+
+
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #F5F5F5;
+    position: absolute;
+    padding: 0px 2vw;
+    z-index:2;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: 0;
+}
+
 #center {
     height: 75vh;
     width: 97%;
-    margin-top:8vw;
-    position: relative;
+    margin-top:11vw;
+    position: fixed;
+    top:0;
     background-color: #FFFFFF; 
     display: flex;
     flex-direction: column;
@@ -268,34 +276,6 @@ nav img{
     width:50%;
     text-align:center;
 }
-/*
-.start-btn{
-    background-color: #8ccc3c;
-    display: flex;
-    align-items: center;
-    padding: 1.5vw 2.5vw;
-    border-radius:3vw;
-}
-.start-btn a{
-    color:#000;
-    text-decoration: none;
-    font-weight: 600;
-    font-size:1.3vw;
-    
-}
-.hover-div{
-    display: none; 
-}
-.hover-div i{
-    font-size:1.5vw;
-    margin-left:1vw;
-   
-}
-
-.start-btn:hover  .hover-div{
-    display:block;
-}
-*/
 
 .start-btn {
     background-color: #8ccc3c;
@@ -328,8 +308,7 @@ nav img{
   }
   
 
-
-#page2 {
+  #page2 {
     min-height: 100vh;
     width: 100%;
     background-color: #F5F5F5;
@@ -538,6 +517,7 @@ nav img{
         transform: translateX(-100%);
     }
 }
+
 
 /*
 
@@ -758,7 +738,7 @@ nav img{
 .text{
     width:fit-content;
     height:250px;
-    width:520px;
+    width:400px;
     overflow: hidden;
     bottom:15%;
     left:-10%;
@@ -1558,6 +1538,7 @@ nav img{
 }
 .pg6-one ul li, .pg6-two ul li{
     margin-block:.2vw;
+    
 }
 .pg6-one ul li::marker {
     color: rgb(50, 196, 50);
@@ -1575,7 +1556,20 @@ nav img{
     flex-direction: column;
     width:100vw;
     background-color: #f5f5f5;
+    min-height:95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.page7-in{
+    width:97.5%;
+    min-height:95vh;
+    background-color: #000;
+    border-radius: 3vw;
+
+}
+/*
 .page7-top{
     display: flex;
     width:85vw;
@@ -1602,6 +1596,7 @@ nav img{
     
 }
 
+
 .pg7-one , .pg7-two {
     height:50%;
     width:45%;
@@ -1619,14 +1614,79 @@ nav img{
 }
 .pg7-one ul li, .pg7-two ul li{
     margin-block:.7vw;
-    background-color: pink;
+    
     padding:1vw;
     border-radius: 1.5vw;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid #0000008d;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+    align-content: center;
+    align-self: center;
+}
+
+.pg7-one ul li::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    color:#fff;
+}
+.pg7-one ul li:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+.pg7-one ul li {
+    
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+.pg7-one ul li:hover  {
+    color: #fff;
 }
 .pg7-one ul li::marker {
     color: rgb(50, 196, 50);
     font-size: 3vw;
+    display: none;
 }
+
+
+.pg7-two ul li::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+.pg7-two ul li:hover::after {
+    bottom: 0;
+    border-radius: 0;
+    color:#fff;
+}
+
+
+.pg7-two ul li:hover  {
+    color: #fff;
+}
+
+
 .pg7-two ul li::marker {
     color: rgb(50, 196, 50);
     font-size: 3vw;
@@ -1636,6 +1696,38 @@ nav img{
     align-items: center;
     justify-content: center;
     width:100vw;
+}
+
+
+.services-item-div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:2.5vw;
+}
+.column {
+    width: 40vw;
+    gap:2vw;
+}
+.service-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 30px;
+    border: 2px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    width:100%;
+}
+.service-item:hover {
+    background: #ddd;
+}
+@media (max-width: 768px) {
+    .service-item {
+        width: 100%; 
+    }
 }
 .service-viewmore{
     height:3vw;
@@ -1674,7 +1766,7 @@ nav img{
 a{
     text-decoration: none;
 }
-
+*/
 #page8{
     height:100vh;
     width:100vw;
