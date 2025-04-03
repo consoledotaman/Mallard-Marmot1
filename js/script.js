@@ -83,7 +83,7 @@ const page1 = document.querySelector('#page1');
 page1.addEventListener('wheel', (event) => {
   console.log(`Scrolled! DeltaY: ${event.deltaY}`);
   
-  // Example: Perform an action when scrolling up or down
+ 
   if (event.deltaY > 0) {
     console.log('Scrolling down');
   } else {
@@ -92,31 +92,19 @@ page1.addEventListener('wheel', (event) => {
 });
 
 
-/*
-const navBar = document.querySelector('.nav-bar');
-const maxScroll = 300; // Maximum scroll range to complete width reduction
 
-window.addEventListener('scroll', () => {
-    const scrollY = Math.min(window.scrollY, maxScroll); // Cap scroll value at maxScroll
-    const newWidth = 100 - (scrollY / maxScroll) * 30; // Calculate width (linear interpolation)
-    navBar.style.width = `${Math.max(70, newWidth)}%`; // Ensure minimum width is 70%
-});
-*/
-
-
-// Select the elements
 const contactBtn = document.querySelector(".contact-event");
 const arrowDiv = document.querySelector(".arrow-div2");
 const contactText =document.querySelector(".contact-event a");
 
-// Add event listeners for hover (mouse over and out)
+
 contactBtn.addEventListener("mouseenter", () => {
-    arrowDiv.style.display= "flex"; // Show the hover-div on mouseenter
+    arrowDiv.style.display= "flex"; 
     contactText.style.marginLeft="1vw";
 });
 
 contactBtn.addEventListener("mouseleave", () => {
-    arrowDiv.style.display = "none"; // Hide the hover-div on mouseleave
+    arrowDiv.style.display = "none"; 
 });
 contactBtn.addEventListener('click', function () {
     window.location.href = 'contact.html';
@@ -144,7 +132,7 @@ function animateNumber(elementId, start, end, duration) {
     updateNumber();
 }
   
-  // Animate from 0 to 50 in 1 second
+
   
 const page2=document.getElementById("page2");
 page2.addEventListener('mouseenter',()=>{
@@ -159,7 +147,7 @@ page2.addEventListener('mouseenter',()=>{
 
 window.addEventListener('beforeunload', () => {
     sessionStorage.setItem('scrollPosition', window.scrollY);
-    sessionStorage.setItem('currentPage', window.location.pathname); // Store current page
+    sessionStorage.setItem('currentPage', window.location.pathname); 
 });
   
 window.addEventListener('load', () => {
@@ -198,24 +186,22 @@ tl
 
 
 
-// Add this script to your HTML file, preferably just before the closing </body> tag
+
 document.addEventListener('DOMContentLoaded', function() {
     const centerDiv = document.getElementById('center');
     let lastScrollTop = 0;
     
     window.addEventListener('scroll', function() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      let scrollProgress = Math.min(scrollTop / 500, 1); // Adjust 500 to control the speed of the effect
+      let scrollProgress = Math.min(scrollTop / 500, 1); 
       
-      // Calculate scale (zoom) value between 1 and 0.7
-      // Start at 1 (normal size) and decrease to 0.7 (30% smaller) as we scroll down
+      
       let scale = 1 - (0.3 * scrollProgress);
       
-      // Calculate opacity from 1 to 0
-      // Start at 1 (fully visible) and decrease to 0 (invisible) as we scroll
+      
       let opacity = 1 - scrollProgress;
       
-      // Apply transformations
+      
       centerDiv.style.transform = `scale(${scale})`;
       centerDiv.style.opacity = opacity;
       
@@ -224,3 +210,55 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+function ourWorkSwiper() {
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper(".mySwiper", {
+          
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          
+          
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          
+          
+          loop: true,                 
+          autoplay: {
+            delay: 1000,              
+            disableOnInteraction: false, 
+          },
+          
+          
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            }
+          },
+          
+          
+          a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+          }
+        });
+      });
+    
+    
+    
+
+}
+
+ourWorkSwiper();

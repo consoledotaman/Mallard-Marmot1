@@ -3,180 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Carousel with Swiper</title>
+    
+    <!-- Add Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
+    
     <style>
-        #page7{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width:100vw;
-    background-color: #f5f5f5;
-}
-.page7-top{
-    display: flex;
-    width:85vw;
-    height:10vw;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom:1vw;
-    background-color: #f5f5f5;
-    border-radius:3vw;
-    
-    
-}
-.page7-top h2{
-    font-size:4vw;
-    color:#000;
-}
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        /* Swiper Container */
+        .swiper {
+            width: 80%;  /* Adjust width */
+            height: 400px;  /* Fixed height */
+            margin: auto; /* Center it */
+        }
 
+        /* Swiper Slides */
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f3f3f3; /* Light background */
+        }
 
-.services-item-div {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap:2.5vw;
-    width:100%;
-}
-.column {
-    width: 35vw;
-    gap:2vw;
-}
-.service-item {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 4vmax;
-    border: 1px solid black;
-    font-size: 1.8vmax;
-    font-weight: normal;
-    text-align: center;
-    cursor: pointer;
-    width:100%;
-    position: relative;
-    overflow: hidden;
-}
+        /* Ensure Images Fit Properly */
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures full coverage */
+            border-radius: 10px; /* Optional rounded corners */
+        }
 
-.service-item::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    left: 0;
-    bottom: -100%;
-    border-radius: 50%;
-    transition: all ease 0.4s;
-}
+        /* Navigation Buttons */
+        .swiper-button-next, .swiper-button-prev {
+            color: #fff;  /* Make arrows white */
+            background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
+            padding: 10px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
 
-.service-item:hover::after {
-    bottom: 0;
-    border-radius: 0;
-}
+        /* Fix for Swiper's built-in sizing of navigation buttons */
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 18px !important;
+        }
 
-.service-item a {
-    color: #000000;
-    text-decoration: none;
-    position: relative;
-    z-index: 9;
-}
+        /* Pagination Dots */
+        .swiper-pagination-bullet {
+            background: #fff; /* White dots */
+            opacity: 0.8;
+        }
 
-
-
-.service-item:hover a {
-    color: #fff;
-}
-@media (max-width: 768px) {
-    .service-item {
-        width: 100%; /* Full width on smaller screens */
-    }
-}
-.service-viewmore{
-    height:3vw;
-    padding:2vw;
-    border-radius:3vw;
-    
-    display:flex;
-    align-items: center;
-    margin:3vw 3vw;
-    background-color: #000;
-
-}
-.service-viewmore p{
-    font-size:1.3vw;
-    font-weight: 500;
-    margin-inline:0.6vw;
-    text-decoration: none;
-    color:#fff;
-}
-.arrow-div4{
-    height:2.8vw;
-    width:2.8vw;
-    border-radius:50%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background-color: #fff;
-    color:#000;
-    position: relative;
-}
-.arrow-div4 i{
-    text-decoration: none;
-}
-a{
-    text-decoration: none;
-}
+        .swiper-pagination-bullet-active {
+            background: #ff5722; /* Highlight active dot */
+        }
     </style>
 </head>
 <body>
-    <div id="page7">
-        <div class="page7-top">
-            <h2>Our Services</h2>
-        </div>
+    <div class="container">
+        <h1>Image Carousel</h1>
         
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/random/800x600/?nature" alt="Nature">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/random/800x600/?travel" alt="Travel">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/random/800x600/?architecture" alt="Architecture">
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/random/800x600/?food" alt="Food">
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <img src="https://source.unsplash.com/random/800x600/?animals" alt="Animals">
+                </div>
+            </div>
             
-                <div class="services-item-div">
-                    <div class="column">
-                        <h4 class="service-item"><a href="#">Event Management</a></h4>
-                        <h4 class="service-item"><a href="#">Celebrity Events</a></h4>
-                        <h4 class="service-item"><a href="#">Entertainments</a></h4>
-                        <h4 class="service-item"><a href="#">Photography & Videography</a></h4>
-                        <h4 class="service-item"><a href="#">Brand Promotions</a></h4>
-                        <h4 class="service-item"><a href="#">Product Launches</a></h4>
-                    </div>
-                    <div class="column">
-                        <h4 class="service-item"><a href="#">Documentary Film</a></h4>
-                        <h4 class="service-item"><a href="#">TVC</a></h4>
-                        <h4 class="service-item"><a href="#">Advertising</a></h4>
-                        <h4 class="service-item"><a href="#">IEC Material Design & Printing</a></h4>
-                        <h4 class="service-item"><a href="#">Digital Marketing</a></h4>
-                        <h4 class="service-item"><a href="#">Catering Services</a></h4>
-                    </div>
-                    
-                    
-                
-                
-                
-                
-            </div>
-            <div class="p7-bottom2">
-                <a href="services.html">
-                    <div class="service-viewmore" >
-                        <p>View More</p>
-                        <div class="arrow-div4" >
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-
-                    </div>
-                </a>
-
-            </div>
-
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 
+    <!-- Add Swiper's JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Initialize Swiper
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".mySwiper", {
+                // Enable accessibility
+                a11y: true,
+                
+                // Enable keyboard control
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true,
+                },
+                
+                // Enable pagination
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                
+                // Enable navigation buttons
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                
+                // Enable continuous loop
+                loop: true,
+                
+                // Enable autoplay
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                
+                // Add effect
+                effect: "slide",
+                
+                // Enable responsive breakpoints
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                    },
+                    1024: {
+                        slidesPerView: 1,
+                    },
+                }
+            });
+        });
+    </script>
 </body>
 </html>

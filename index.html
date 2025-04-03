@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="style.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="landingpage.css">
 </head>
 
@@ -40,6 +41,7 @@
     <div id="fixed-image">
 
     </div>
+    
     <div id="full-scr" >
         <div id="full-div1">
           <div class="menu-links">
@@ -129,7 +131,7 @@
     </div>
     <div id="main">
         
-
+        
         
         <div id="page2">
 
@@ -235,9 +237,11 @@
             <div class="page2-right">
                 
                 <video height="100%" autoplay muted loop>
-                    <source src="videos/HON Minister (1) (1) 2.mp4" type="video/mp4">
+                    <source src="video.av1.webm" type="video/webm; codecs=av01">  
+                    <source src="videos/HON Minister.webp" type="video/webm">  
+                    <source src="videos/HON Minister.mp4" type="video/mp4">
                     
-                  Your browser does not support the video tag.
+                    Your browser does not support the video tag.
                 </video>   
                 
 
@@ -268,14 +272,27 @@
                     <h1 style="font-size: 4vw;">Digital Marketing</h1>
                 </div>
                 <div class="image-container">
-                    <img src="images/events-hero.png" alt="Hero Image1">
+                    <picture>
+                        
+                        <source srcset="images-webp/events-hero.webp" type="image/webp">
+                        <img src="images/events-hero.png" alt="Hero image1"  loading="lazy">
+                    </picture>
+                      
                 </div>
                 <div class="image-container">
-                    <img src="images/media-hero.png"  alt="Hero Image2">
+                    <picture>
+                        
+                        <source srcset="images-webp/media-hero.webp" type="image/webp">
+                        <img src="images/media-hero.png" alt="Hero image2" loading="lazy">
+                    </picture>
                 </div>
                 
                 <div class="image-container">
-                    <img src="images/digital-marketing-hero.png" alt="Hero Image3">
+                    <picture>
+                        <source srcset="images-webp/digital-marketing-hero.avif" type="image/avif">
+                        <source srcset="images-webp/digital-marketing-hero.webp" type="image/webp">
+                        <img src="images/digital-marketing-hero.png" alt="Hero image3" loading="lazy">
+                    </picture>
                 </div>
 
             </div>
@@ -446,7 +463,7 @@
                         <h2>Our Work</h2>
                         <p>Unforgettable experiences crafted to perfection.</p>
                     </div>
-                    <a href="Events/events.html">
+                    <a href="events.html">
                         <div class="e-viewmore" id="vm-event">
                             <p>View More</p>
                             <div class="arrow-div3" >
@@ -463,11 +480,7 @@
                                 <div class="swiper-slide">
                                     <img src="https://images.unsplash.com/photo-1731902062588-4dce45ccc0cb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8">
                                     
-                                </div>     
-                                    
-
-                                
-                              
+                                </div>       
                               <div class="swiper-slide">
                                 <img src="https://images.unsplash.com/photo-1731580329222-9655f231d566?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D">
                                 
@@ -481,6 +494,8 @@
                               <div class="swiper-slide">Slide 9</div>
                             </div>
                             <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                           </div>
                     </div>
 
@@ -730,8 +745,14 @@
                     
                 </div>
                 <div class="foot-bottom-right">
-                    <h5>Designed & Developed by Aman Raj</h5>
-                    <p> raj.aman4001@gmail.com</p>
+                    <h5>Developed by Aman Raj</h5>
+                    
+                    <div class="developer-socials">
+                        <a href="https://www.linkedin.com/in/aman-raj-1b2a8b326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/ft.amannn_/profilecard/?igsh=MXM1cWRhcDMycHMyNQ=="  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://github.com/consoledotaman" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="mailto:raj.aman4001@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-square-envelope"></i></a>
+                    </div>
                 </div>
             </div>    
             
@@ -740,6 +761,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     
 </body>
