@@ -19,12 +19,17 @@ function menuAnimation() {
             flag = 0
         }
     })
+    full.addEventListener("click", function () {
+        full.style.top = "-200%"; 
+        navimg.style.opacity = "1";
+        flag = 0;
+    });
 }
 menuAnimation();
 
 window.addEventListener('beforeunload', () => {
     sessionStorage.setItem('scrollPosition', window.scrollY);
-    sessionStorage.setItem('currentPage', window.location.pathname); // Store current page
+    sessionStorage.setItem('currentPage', window.location.pathname); 
 });
   
 window.addEventListener('load', () => {
@@ -50,7 +55,7 @@ document.getElementById("menu-icon").addEventListener("click", function () {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add("show");
-                }, index * 300); // Delay each box appearing
+                }, index * 300); 
             }
         });
     }, { threshold: 0.1 });

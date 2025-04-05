@@ -320,6 +320,8 @@ nav img{
     transform:translateY(22vmax);
     animation: alver 1.5s forwards .4s;
     opacity:0;
+    transition: margin-right 1s ease;
+    
   }
 
   .start-btn a {
@@ -330,18 +332,51 @@ nav img{
   }
   
   .hover-div {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positioned relative to start-btn */
-    top: 50%;
-    right: 2vw;
-    transform: translateY(-50%);
+    
+    position: absolute; 
+    top: 20%;
+    right: 1vw;
+    
+    
+    height:3vw;
+    width:3vw;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
   }
   
   .hover-div i {
     font-size: 1.5vw;
-    margin-left: 1vw;
+    opacity: 0;
+    color:#000;
+    transform: translateX(-160%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
   }
-  
+
+
+
+
+
+
+.start-btn:hover .hover-div {
+    display:flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+.start-btn:hover a{
+    margin-right: 3vw;
+}
+.start-btn:hover .hover-div i{
+    
+    opacity: 1;
+    transform: translateX(0);
+}
 
   #page2 {
     min-height: 100vh;
@@ -902,7 +937,7 @@ nav img{
   .menu-links h4{
     margin-left: 10vw;
     padding-top:3vw ;
-    width:30%;
+    width:100%;
     
     
   }
@@ -939,8 +974,6 @@ nav img{
     align-items: center;
     border-radius:3vw;
     overflow: hidden;
-    
-    
 }
 
 .swiper-slide img {
@@ -966,7 +999,7 @@ nav img{
   .swiper-slide:nth-child(3n) {
     width: 20%;
   }
-/* ===== SWIPER PAGINATION STYLES ===== */
+
 .swiper-pagination {
     
     opacity: 0.8;
@@ -1016,8 +1049,10 @@ nav img{
     text-decoration: none;
     color:#ffffffa2
 }
-
-@media (max-width:400px) {
+.developer-socials a:hover{
+    color:#8ccc3c;
+}
+@media (max-width:430px) {
     .pg1-logodiv{
         display: block;
     }
@@ -1052,10 +1087,11 @@ nav img{
 
     
     #center {
+        
         height: 80vh;
         width: 97%;
-        margin-top:15vw;
-        position: relative;
+        margin-top:28vw;
+        position: fixed;
         
         
         padding-bottom: 2.5vh;
@@ -1120,11 +1156,29 @@ nav img{
     .start-btn a {
         color: #000;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 4vw;
+        margin-right: 6vw;
+    }
+    
+    .start-btn:hover a{
+        margin-right: 6vw;
+    }
+    
+    .hover-div{
+        height:7vw;
+        width:7vw;
+        right:2vw;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .hover-div i{
+        font-size: 2vh;
+        opacity: 1;
+        transform: translateX(0);
     }
     #page2 {
-        min-height: 100vh;
+        min-height: 43vh;
         width: 100%;
         background-color: #F5F5F5;
         padding: 8vw 0;
@@ -1136,10 +1190,12 @@ nav img{
     }
     .page2-left{
         width:95%;
-        height:85vh;
+        height:43vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: none;
+        margin: none;
         
     }
     
@@ -1162,10 +1218,10 @@ nav img{
     }
     
     .page2-left-down{
-        width:100%;
-        height:62vh;
-        flex-direction: column;
-        
+        width:97.5%;
+        height:23vh;
+        justify-content: space-between;
+        align-items: end;
         
         
     }
@@ -1174,7 +1230,7 @@ nav img{
         width:100%;
         border-radius:3vh;
         
-        height:30vh;
+        height:20vh;
         display:flex;
         align-items: center;
         justify-content: center;
@@ -1185,21 +1241,21 @@ nav img{
         
         width:100%;
         border-radius:3vh;
-        height:30vh;
+        height:20vh;
         
         flex-direction: column;
         
     }
     .event-count{
-        margin-left: 3vh;
+        margin-left: 1vw;
     }
     .event-count h3{
-        font-size: 5vh;
+        font-size: 3vh;
         
     }
     .event-count p{
         
-        font-size: 5vw;
+        font-size: 1.3vh;
     }
     .event-outer{
         position:absolute;
@@ -1208,23 +1264,23 @@ nav img{
         margin:2vw;
     }
     .film-count{
-        margin-left: 3vh;
+        margin-left: 1vw;
     }
     .film-count h3{
-        font-size: 5vh;
+        font-size: 3vh;
         
         color:#fff;
     }
     .film-count p{
         font-weight: 400;
-        font-size: 5vw;
+        font-size: 1.3vh;
         color:#fff;
     }
     
     .contact-event{
         
-        height:5vh;
-        width:20vh;
+        height:3vh;
+        width:15vh;
         background-color: #fff;
         
         bottom:0;
@@ -1237,15 +1293,15 @@ nav img{
     .contact-event a{
         
         font-weight: 400;
-        font-size: 2.5vh;
+        font-size: 1.5vh;
         transition: all linear 1s;
     }
     .arrow-div2{
-        height:2.8vh;
-        width:2.8vh;
+        height:2.5vh;
+        width:2.5vh;
         
         color:#fff;
-        display:none;
+        display:flex;
         
     }
     
@@ -1426,7 +1482,12 @@ nav img{
         
     }
     
-
+    .swiper-slide{
+        width:50%;
+    }
+    .swiper-wrapper{
+        width:80%;
+    }
 
 }
 
@@ -1929,6 +1990,7 @@ nav img{
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    color:#8ccc3c;
 }
 .socialicons-foot:hover{
     background-color: #8ccc3c;
@@ -1940,12 +2002,15 @@ nav img{
 .socialicons-foot i{
     color:#8ccc3c;
     font-size: 2.2vw;
+    text-decoration: none;
     
 }
-.socialicons-foot a{
+.social-foot a{
     text-decoration: none;
 }
-
+.socialicons-foot a i{
+    text-decoration: none;
+}
 .foot-bottom-left{
     position: absolute;
     bottom:0;

@@ -53,7 +53,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     // Send email using EmailJS
     emailjs.init("lIwJksitBsxzz_zBt");
     emailjs
-      .send("service_wa7mhkv", "template_0qy1737", data) // Replace with your Service ID and Template ID
+      .send("service_wa7mhkv", "template_0qy1737", data) 
       .then(() => {
         alert("Form submitted successfully! We'll get back to you soon.");
         document.getElementById("contactForm").reset(); // Reset form fields
@@ -82,11 +82,16 @@ document.getElementById("contactForm").addEventListener("submit", function (even
             flag = 0
         }
     })
+    full.addEventListener("click", function () {
+      full.style.top = "-200%"; 
+      navimg.style.opacity = "1";
+      flag = 0;
+    });
 }
 menuAnimation();
 window.addEventListener('beforeunload', () => {
     sessionStorage.setItem('scrollPosition', window.scrollY);
-    sessionStorage.setItem('currentPage', window.location.pathname); // Store current page
+    sessionStorage.setItem('currentPage', window.location.pathname); 
 });
   
 window.addEventListener('load', () => {
@@ -99,7 +104,7 @@ window.addEventListener('load', () => {
 });
 
 
-// script.js
+
 document.getElementById("menu-icon").addEventListener("click", function () {
   this.classList.toggle("active");
 });

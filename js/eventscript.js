@@ -22,11 +22,12 @@ tl
     top:"-100%"
 },'a')
 
+/*
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
 });
-
+*/
 
 function menuAnimation() {
 
@@ -45,11 +46,16 @@ function menuAnimation() {
             flag = 0
         }
     })
+    full.addEventListener("click", function () {
+        full.style.top = "-200%"; 
+        navimg.style.opacity = "1";
+        flag = 0;
+    });
 }
 menuAnimation();
 window.addEventListener('beforeunload', () => {
     sessionStorage.setItem('scrollPosition', window.scrollY);
-    sessionStorage.setItem('currentPage', window.location.pathname); // Store current page
+    sessionStorage.setItem('currentPage', window.location.pathname); 
 });
   
 window.addEventListener('load', () => {

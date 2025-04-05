@@ -41,7 +41,7 @@ html, body {
   .menu-links h4{
     margin-left: 10vw;
     padding-top:3vw ;
-    width:30%;
+    width:100%;
     
     
   }
@@ -835,7 +835,9 @@ nav img{
     font-size: 2.2vw;
     
 }
-
+.social-foot a{
+    text-decoration: none;
+}
 .foot-bottom-left{
     position: absolute;
     bottom:0;
@@ -879,6 +881,9 @@ nav img{
 .developer-socials a{
     text-decoration: none;
     color:#ffffffa2
+}
+.developer-socials a:hover{
+    color:#8ccc3c;
 }
 @media (max-width:500px){
     .foot-upper{
@@ -1021,14 +1026,14 @@ nav img{
   }
   .about-company {
     width:80%;
-    margin-inline: 10%;
+    margin-inline: 5%;
   }
   .about-left{
-    width:80%;
-    margin-inline:10%;
+    width:85%;
+    margin-inline:7%;
   }
   .about-company h2{
-    font-size: 7vw;
+    font-size: 6vw;
   }
   .right-in{
     margin-inline: 0px;
@@ -1044,7 +1049,9 @@ nav img{
   }
   .about-left p{
     font-size: 3vw;
-
+    line-height: 3.4vw;
+    padding: 5vw 1vw ;
+    
   }
   #page2{
     flex-direction: column;
@@ -1060,7 +1067,17 @@ nav img{
   }
   .page1-in {
     height:25vmin;
-
+    justify-content: space-between;
+    width:80%;
+  }
+  .page1-in h1{
+    font-size: 5vw;
+  }
+  .page1-in h2{
+    font-size: 5vw;
+  }
+  .p1-logo{
+    margin-top: 0;
   }
   #page4 {
         

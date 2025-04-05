@@ -11,11 +11,11 @@ const plusCrossDiv1=document.getElementById('plus-crossdiv1');
 const plusCrossDiv2=document.getElementById('plus-crossdiv2');
 const plusCrossDiv3=document.getElementById('plus-crossdiv3');
 
-
+/*
 const scroll = new LocomotiveScroll({
   el: document.querySelector('#main'),
   smooth: true
-});
+}); */
 aboutDiv1.addEventListener('click',()=>{
     
     aboutPara1.style.display = aboutPara1.style.display === 'block' ? 'none' : 'block';
@@ -60,22 +60,22 @@ aboutDiv3.addEventListener('click',()=>{
 });
     const hoverBoxes = document.querySelectorAll('.right-in');
 
-    // Add the mousemove effect to each box
+    
     hoverBoxes.forEach((box) => {
       box.addEventListener('mousemove', (event) => {
-        // Get the dimensions and position of the element
+        
         const rect = box.getBoundingClientRect();
         
-        // Calculate the relative position of the mouse
-        const offsetX = (event.clientX - rect.left) / rect.width - 0.5; // Range: -0.5 to 0.5
-        const offsetY = (event.clientY - rect.top) / rect.height - 0.5; // Range: -0.5 to 0.5
         
-        // Apply movement
+        const offsetX = (event.clientX - rect.left) / rect.width - 0.5; 
+        const offsetY = (event.clientY - rect.top) / rect.height - 0.5; 
+        
+        
         box.style.transform = `translate(${offsetX * 10}px, ${offsetY * 10}px)`;
       });
 
       box.addEventListener('mouseleave', () => {
-        // Reset position when the mouse leaves
+        
         box.style.transform = 'translate(0, 0)';
       });
     });
@@ -96,11 +96,16 @@ aboutDiv3.addEventListener('click',()=>{
               flag = 0
           }
       })
+      full.addEventListener("click", function () {
+        full.style.top = "-200%"; 
+        navimg.style.opacity = "1";
+        flag = 0;
+      });
   }
   menuAnimation();
   window.addEventListener('beforeunload', () => {
       sessionStorage.setItem('scrollPosition', window.scrollY);
-      sessionStorage.setItem('currentPage', window.location.pathname); // Store current page
+      sessionStorage.setItem('currentPage', window.location.pathname); 
   });
     
   window.addEventListener('load', () => {

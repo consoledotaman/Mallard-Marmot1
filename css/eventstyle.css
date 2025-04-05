@@ -40,7 +40,7 @@ html, body {
   .menu-links h4{
     margin-left: 10vw;
     padding-top:3vw ;
-    width:30%;
+    width:100%;
     
     
   }
@@ -577,7 +577,9 @@ nav img{
     font-size: 2.2vw;
     
 }
-
+.social-foot a{
+    text-decoration: none;
+}
 .foot-bottom-left{
     position: absolute;
     bottom:0;
@@ -630,6 +632,9 @@ nav img{
 .developer-socials a{
     text-decoration: none;
     color:#ffffffa2
+}
+.developer-socials a:hover{
+    color:#8ccc3c;
 }
 @media (max-width:500px){
     .foot-upper{
@@ -820,7 +825,7 @@ nav img{
     bottom: 2vw;
     left:2vw;
     
-    font-size: 4vw;
+    font-size: 3vw;
     border-radius: 3vw; /* Optional: rounded corners */
     padding: 1vw 2vw;
     backdrop-filter: none;
