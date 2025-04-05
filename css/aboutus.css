@@ -793,7 +793,10 @@ nav img{
 
     
 }
-
+.foot-div a{
+    text-decoration: none;
+    color:#fff;
+}
 .foot-div ul{
     color:#fff;
     list-style-type: none;

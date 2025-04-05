@@ -531,6 +531,10 @@ input[type="checkbox"]:checked + label:hover {
     margin-block: 2vw;
     font-size: 2vw;
 }
+.foot-div a{
+  text-decoration: none;
+  color:#fff;
+}
 .contact-num , .email-foot , .location-foot , .address-foot{
     color:#fff;
     display:flex;
