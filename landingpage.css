@@ -329,6 +329,7 @@ nav img{
     text-decoration: none;
     font-weight: 400;
     font-size: 1.3vw;
+    transition: margin-right 0.4s ease-in-out;
   }
   
   .hover-div {
@@ -370,7 +371,7 @@ nav img{
     transform: translateX(0);
 }
 .start-btn:hover a{
-    margin-right: 3vw;
+    margin-right: 1.2vw;
 }
 .start-btn:hover .hover-div i{
     
@@ -964,87 +965,88 @@ nav img{
     width: 100%;
     height: 100%;
   }
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+  
+  .swiper-slide {
+    width: 60%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius:3vw;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 3vw;
     overflow: hidden;
-}
-
-.swiper-slide img {
-    display: block;
+    color: #fff;
+    border: 1px solid #ffffff3c;
+  }
+  
+  .swiper-slide picture {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;         /* Changed from 120% to 100% */
+    height: 100%;        /* Make it fill the container */
+    object-fit: cover;   /* Keeps image aspect ratio, fills container */
     transition: transform 1s ease;
-}
-.swiper-slide:hover img {
-    transform: scale(1.2); /* Scale up the image */
-}
-
-  .swiper-slide {
+    border-radius: 3vw;  /* Matches container’s rounding */
+  }
+  
+  .swiper-slide:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* Optional: Only keep width settings for special slides if needed */
+  .swiper-slide.swiper-slide-active,
+  .swiper-slide.swiper-slide-prev,
+  .swiper-slide.swiper-slide-next {
+    object-fit: cover;
     width: 60%;
-    height:auto;
+    height: auto;
   }
-
-  .swiper-slide:nth-child(2n) {
-    width: 40%;
-  }
-
-  .swiper-slide:nth-child(3n) {
-    width: 20%;
-  }
-
-.swiper-pagination {
-    
+  
+  .swiper-pagination {
     opacity: 0.8;
     width: 12px;
     height: 12px;
     margin: 5px;
     transition: all 0.3s ease-in-out;
-    color:#fff;
+    color: #fff;
     display: none;
-}
-
-.swiper-pagination:active {
-    
-    transform: scale(1.3); 
-}
-
-
-.swiper-button-next,
-.swiper-button-prev {
-    color: #fff; 
-    background: rgba(0, 0, 0, 0.5); 
+  }
+  
+  .swiper-pagination:active {
+    transform: scale(1.3);
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
     padding: 15px;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     transition: all 0.3s ease-in-out;
-    
-}
-
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background: rgba(30, 20, 18, 0.9); 
-    transform: scale(1.1); 
-    box-shadow: 0 0 10px rgba(20, 13, 11, 0.8); 
-}
-
-
-.swiper-button-next:active,
-.swiper-button-prev:active {
-    transform: scale(0.9); 
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: rgba(30, 20, 18, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(20, 13, 11, 0.8);
+  }
+  
+  .swiper-button-next:active,
+  .swiper-button-prev:active {
+    transform: scale(0.9);
     background: #8ccc3c;
     box-shadow: 0 0 15px rgb(16, 9, 7);
-}
-
+  }
+  
 .developer-socials a{
     text-decoration: none;
     color:#ffffffa2
@@ -1769,72 +1771,91 @@ nav img{
 
 
 
-#page8{
-    height:100vh;
-    width:100vw;
+#page8 {
+    width: 100vw;
     background-color: #f5f5f5;
     position: relative;
-}
-.page8-top{
+    margin-bottom: 3vw;
+    /* Removed min-height: 100vh */
+  }
+  
+  
+  .page8-top {
     display: flex;
-    width:75vw;
-    height:13vw;
+    width: 75vw;
+    height: 13vw;
     align-items: center;
-    
-    text-align:left;
-    
-    
-    border-radius:3vw;
-    margin-left:7vw;
-    
-}
-.page8-top h2{
-    font-size:3vw;
-    color:#000;
-}
-.page8-top span{
-    color:#e9c836;
-}
-.map-img{
-    height:5vw;
-    
+    text-align: left;
+    border-radius: 3vw;
+    margin-left: 7vw;
+  }
+  
+  .page8-top h2 {
+    font-size: 3vw;
+    color: #000;
+  }
+  
+  .page8-top span {
+    color: #e9c836;
+  }
+  
+  .map-img {
     position: absolute;
-    top:0;
-    right:0;
-    margin-right:8vw;
-    margin-top:2vw;
-
-}
-.map-img img{
-    height:13vw;
-}
-.govt-works-outer{
-    display:flex;
+    top: 0;
+    right: 0;
+    margin-right: 8vw;
+    margin-top: 2vw;
+  }
+  
+  .map-img img {
+    height: 13vw;
+    width: auto;
+    display: block;
+  }
+  
+  /* Outer container for image blocks */
+  .govt-works-outer {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1vw;
-    height:50%;
-    width:50%;
-    position: absolute;
-    right:0;
-
-    margin: 3vw 9vw;
-}
-.govt-works{
-    width:48%;
-    height:48%;
-    border:1px solid black;
+    width: 60vw;
+    margin: 2vw auto;
+    position: relative; /* Was absolute — now normal flow */
+    margin-right: 3vw;
+  }
+  
+  
+  /* Individual image container */
+  .govt-works {
+    width: 48%;
+    aspect-ratio: 16 / 9;
+    border: 0.2vw solid black;
     border-radius: 1vw;
-}
-#dhol-img{
-    position: absolute;
+    overflow: hidden;
+  }
+  
+  /* Responsive images */
+  .govt-works picture,
+  .govt-works img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 1vw;
+  }
+  
+  #dhol-img {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 1vw;
+    margin-left: 0vw;
+    position: absolute; 
     bottom:0;
-    left: 0;
-    height:30vw;
-    margin-left:3vw;
-    
-}
-
+    left:0;
+  }
+  
+  
 #footer{
     min-height:100vh;
     width:100vw;
@@ -2121,9 +2142,11 @@ nav img{
         font-size:1vh;
         text-decoration: none;
     }
-    #page8{
-        height:30vh;
+    .govt-works{
+        width:48%;
     }
+    
+      
 
 }
 @media (max-width:600px){
