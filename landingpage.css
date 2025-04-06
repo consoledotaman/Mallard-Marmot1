@@ -407,9 +407,9 @@ nav img{
     
 }
 .page9-right{
-    width:30%;
+    
     position: relative;
-    height:100vh;
+    max-height:80vh;
     border-radius:2vw;
     
     overflow: hidden;
@@ -593,7 +593,7 @@ nav img{
 }
 
 #page3 {
-    min-height: 100vh;
+    height:auto;
     width: 100%;
     background-color: #F5F5F5;
     padding: 4vw 0;
@@ -704,7 +704,7 @@ nav img{
     height: 1px;
     width: 100%;
     background-color: #f5f5f5;
-    padding-block:2vw;
+    
 }
 
 
@@ -1088,7 +1088,7 @@ nav img{
     
     #center {
         
-        height: 80vh;
+        height: 75vh;
         width: 97%;
         margin-top:28vw;
         position: fixed;
@@ -1406,7 +1406,7 @@ nav img{
     .text{
         width:fit-content;
         height:60px;
-        width:100px;
+        width:140px;
         overflow: hidden;
         bottom:19%;
         left:-12%;
@@ -1423,7 +1423,7 @@ nav img{
     }
     
     #page3 {
-        min-height: 50vh;
+        height:auto;
         width: 100%;
         background-color: #F5F5F5;
         padding: 4vw 0;

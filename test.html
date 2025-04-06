@@ -1,179 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Carousel with Swiper</title>
-    
-    <!-- Add Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.css">
-    
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f8f8f8;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-        }
-        
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #333;
-        }
-        
-        /* Swiper Container */
-        .swiper {
-            width: 80%;  /* Adjust width */
-            height: 400px;  /* Fixed height */
-            margin: auto; /* Center it */
-        }
+  <meta charset="UTF-8">
+  <title>Popup on Submit</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-        /* Swiper Slides */
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f3f3f3; /* Light background */
-        }
+    form {
+      margin-top: 100px;
+      text-align: center;
+    }
 
-        /* Ensure Images Fit Properly */
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures full coverage */
-            border-radius: 10px; /* Optional rounded corners */
-        }
+    /* The popup overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* stays on top */
+    }
 
-        /* Navigation Buttons */
-        .swiper-button-next, .swiper-button-prev {
-            color: #fff;  /* Make arrows white */
-            background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
-            padding: 10px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-        }
+    /* The popup box */
+    .popup-box {
+      background-color: #fff;
+      padding: 25px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
 
-        /* Fix for Swiper's built-in sizing of navigation buttons */
-        .swiper-button-next:after, .swiper-button-prev:after {
-            font-size: 18px !important;
-        }
+    .popup-box.success {
+      border: 2px solid #28a745;
+      color: #28a745;
+    }
 
-        /* Pagination Dots */
-        .swiper-pagination-bullet {
-            background: #fff; /* White dots */
-            opacity: 0.8;
-        }
+    .popup-box.error {
+      border: 2px solid #dc3545;
+      color: #dc3545;
+    }
 
-        .swiper-pagination-bullet-active {
-            background: #ff5722; /* Highlight active dot */
-        }
-    </style>
+    .popup-box button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .popup-box button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Image Carousel</h1>
-        
-        <!-- Swiper -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/random/800x600/?nature" alt="Nature">
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/random/800x600/?travel" alt="Travel">
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/random/800x600/?architecture" alt="Architecture">
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/random/800x600/?food" alt="Food">
-                </div>
-                <!-- Slide 5 -->
-                <div class="swiper-slide">
-                    <img src="https://source.unsplash.com/random/800x600/?animals" alt="Animals">
-                </div>
-            </div>
-            
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            
-            <!-- Add Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </div>
 
-    <!-- Add Swiper's JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
-    
-    <script>
-        // Initialize Swiper
-        document.addEventListener('DOMContentLoaded', function() {
-            var swiper = new Swiper(".mySwiper", {
-                // Enable accessibility
-                a11y: true,
-                
-                // Enable keyboard control
-                keyboard: {
-                    enabled: true,
-                    onlyInViewport: true,
-                },
-                
-                // Enable pagination
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                
-                // Enable navigation buttons
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                
-                // Enable continuous loop
-                loop: true,
-                
-                // Enable autoplay
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: false,
-                },
-                
-                // Add effect
-                effect: "slide",
-                
-                // Enable responsive breakpoints
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                    },
-                    768: {
-                        slidesPerView: 1,
-                    },
-                    1024: {
-                        slidesPerView: 1,
-                    },
-                }
-            });
-        });
-    </script>
+  <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Popup Overlay -->
+  <div id="popupOverlay" class="popup-overlay">
+    <div id="popupBox" class="popup-box">
+      <p id="popupMessage">Message goes here</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupBox = document.getElementById('popupBox');
+    const popupMessage = document.getElementById('popupMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Simulate success
+      const isSuccess = true;
+
+      if (isSuccess) {
+        popupMessage.textContent = "Form submitted successfully!";
+        popupBox.classList.remove("error");
+        popupBox.classList.add("success");
+      } else {
+        popupMessage.textContent = "Form submission failed.";
+        popupBox.classList.remove("success");
+        popupBox.classList.add("error");
+      }
+
+      popupOverlay.style.display = "flex";
+    });
+
+    function closePopup() {
+      popupOverlay.style.display = "none";
+    }
+  </script>
+
 </body>
 </html>

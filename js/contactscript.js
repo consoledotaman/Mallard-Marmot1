@@ -1,5 +1,5 @@
 
-// Get references to all service checkboxes
+
 const webDesignCheckbox = document.getElementById('service-webdesign');
 const webflowCheckbox = document.getElementById('service-webflow');
 const seoCheckbox = document.getElementById('service-seo');
@@ -26,43 +26,55 @@ checkboxes.forEach((checkbox, index) => {
 });
 
 
-// Add the mousemove effect to each box
 
 
+const popupOverlay = document.getElementById('popupOverlay');
+const popupBox = document.getElementById('popupBox');
+const popupMessage = document.getElementById('popupMessage');
+
+function showPopup(message, isSuccess) {
+  popupMessage.textContent = message;
+  popupBox.classList.remove("success", "error");
+  popupBox.classList.add(isSuccess ? "success" : "error");
+  popupOverlay.style.display = "flex";
+}
+
+function closePopup() {
+  popupOverlay.style.display = "none";
+}
 
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission behavior
+  event.preventDefault(); 
+
   
-    // Collect form data
-    const formData = new FormData(this);
-    const selectedServices = [];
-    document.querySelectorAll('input[name="service"]:checked').forEach((label1) => {
-      selectedServices.push(label1.value);
-    });
-  
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      contact: formData.get("contact"),
-      
-      message: formData.get("message"),
-      service: selectedServices.join(", "), // Combine checked services into a comma-separated string
-      
-    };
-  
-    // Send email using EmailJS
-    emailjs.init("lIwJksitBsxzz_zBt");
-    emailjs
-      .send("service_wa7mhkv", "template_0qy1737", data) 
-      .then(() => {
-        alert("Form submitted successfully! We'll get back to you soon.");
-        document.getElementById("contactForm").reset(); // Reset form fields
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-        alert("Failed to send the form. Please try again.");
-      });
+  const formData = new FormData(this);
+  const selectedServices = [];
+  document.querySelectorAll('input[name="service"]:checked').forEach((label1) => {
+    selectedServices.push(label1.value);
   });
+
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    contact: formData.get("contact"),
+    message: formData.get("message"),
+    service: selectedServices.join(", "), // Combine checked services into a comma-separated string
+  };
+
+  
+  emailjs.init("lIwJksitBsxzz_zBt");
+  emailjs
+    .send("service_wa7mhkv", "template_0qy1737", data)
+    .then(() => {
+      showPopup("Form submitted successfully! We'll get back to you soon.", true);
+      document.getElementById("contactForm").reset(); // 
+    })
+    .catch((error) => {
+      console.error("Error sending email:", error);
+      showPopup("Failed to send the form. Please try again.", false);
+    });
+});
+
   
 
   function menuAnimation() {
@@ -86,7 +98,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
       full.style.top = "-200%"; 
       navimg.style.opacity = "1";
       flag = 0;
-    });
+  });
 }
 menuAnimation();
 window.addEventListener('beforeunload', () => {
