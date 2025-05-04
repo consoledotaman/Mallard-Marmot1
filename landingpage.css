@@ -959,12 +959,13 @@ nav img{
   }
 .event-swiper{
     height:58%;
-    
+    overflow: hidden;
 }
 .swiper {
     width: 100%;
     height: 100%;
   }
+
   
   .swiper-slide {
     width: 60%;

@@ -8,10 +8,6 @@ const uiuxCheckbox = document.getElementById('service-uiux');
 const appCheckbox = document.getElementById('service-app');
 
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('#main'),
-  smooth: true
-});
 
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
