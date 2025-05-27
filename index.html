@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="style.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="landingpage.css">
 </head>
 
@@ -208,7 +207,7 @@
                     <div class="left-down-right">
                         <div class="event-outer">
                             <div class="event-count">
-                                <h3 id="event-num1">10</h3>
+                                <h3 id="event-num1">20</h3>
                                 <h3>+</h3>
                                 <p>Mega Outdoor events</p>
                             </div>
@@ -241,7 +240,7 @@
                 
                 <video height="100%" autoplay muted loop>
                     <source src="video.av1.webm" type="video/webm; codecs=av01">  
-                    <source src="videos/HON Minister.webp" type="video/webm">  
+                    <source src="videos/HON+Minister.webm" type="video/webm">  
                     <source src="videos/HON Minister.mp4" type="video/mp4">
                     
                     Your browser does not support the video tag.
@@ -456,7 +455,118 @@
                 
             </div>
         </div>
+        
+        <div id="pageX">
+               <div class="container">
+        <div class="header">
+            <div>
+                <h1>Our Work</h1>
+                <p>Unforgettable experiences crafted to perfection.</p>
+            </div>
+            <button class="view-more-btn">
+                View More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                </svg>
+            </button>
+        </div>
 
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                
+                <div class="carousel-slide">
+                      <picture>
+                          <source srcset="images-webp/cultural2.webp" type="image/webp">
+                          <img src="images/cultural2.jpg" alt="" loading="lazy">
+                      </picture>
+                    <div class="slide-overlay">
+                        <div class="slide-title">Cultural Performances</div>
+                        <div class="slide-description">Traditional dance performances that captivate audiences with authentic cultural expressions.</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <picture>
+                        <source srcset="images-webp/OMC cover.webp" type="image/webp">
+                        
+                        
+                        <img src="images/OMC cover.jpeg" alt="" loading="lazy">
+                    </picture>
+                    <div class="slide-overlay">
+                        <div class="slide-title">Corporate Events</div>
+                        <div class="slide-description">Professional conferences and seminars designed to inspire and educate industry leaders.</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                      <video height="100%" autoplay muted loop loading="lazy"> >
+                    <source src="video.av1.webm" type="video/webm; codecs=av01">  
+                     
+                    <source src="videos/Mu Odia.mp4" type="video/mp4">
+                    
+                    Your browser does not support the video tag.
+                    </video>   
+                    <div class="slide-overlay">
+                        <div class="slide-title">Mu Odia<a href="https://youtu.be/tUHti1WY60k?si=aE31VVm3ntaHluZ0"><i class="fa-brands fa-youtube" style="margin-left:10px; color:red; "></i>
+                                                        </a></div>
+                        <div class="slide-description">A Mallard & Marmot Pvt.Ltd. Production</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <picture>
+
+                        <source srcset="images-webp/govt6.webp" type="image/webp">
+                        <img src="images/govt6.jpg" alt="" loading="lazy">
+                    </picture>
+                    <div class="slide-overlay">
+                        <div class="slide-title">Inauguration Events</div>
+                        <div class="slide-description">Grand openings and launch ceremonies that mark the beginning of new ventures with elegance and impact.</div>
+
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <picture>
+
+                        <source srcset="images-webp/cultural6.webp" type="image/webp">
+                        <img src="images/cultural6.jpg" alt="" loading="lazy">
+                    </picture>
+                    <div class="slide-overlay">
+                        <div class="slide-title">Music Concerts</div>
+                        <div class="slide-description">Live music events featuring talented artists that create unforgettable entertainment experiences.</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <picture>
+
+                        <source srcset="images-webp/mega4.webp" type="image/webp">
+                        <img src="images/mega4.jpg" alt="" loading="lazy">
+                    </picture>                    <div class="slide-overlay">
+                     <div class="slide-title">Art Exhibitions</div>
+                        <div class="slide-description">Curated art showcases that bring together creativity and cultural appreciation.</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-nav prev" id="prevBtn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            <button class="carousel-nav next" id="nextBtn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="carousel-indicator" id="indicator">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+            <div class="indicator" data-slide="3"></div>
+            <div class="indicator" data-slide="4"></div>
+        </div>
+    </div>
+        </div>
+<!--
         <div id="page5">
             
             <div class="services-div">
@@ -476,10 +586,12 @@
                         </div>
                     </a>
                     
-                    <div class="event-swiper">
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+    <div class="event-swiper">
+      
+     
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
                                     <picture>
                             
                                         <source srcset="images-webp/cultural2.webp" type="image/webp">
@@ -548,19 +660,18 @@
                                     <img src="images/recent-works1.png" alt="" loading="lazy">
                                 </picture>
                               </div>
-                              
-                              
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                          </div>
-                    </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
 
                         
                     
         
                 </div>
+                -->
                 <!--
                 <div id="page5-media"class="p5-services">
                     <div class="p5-e-top" id="media-head">
@@ -654,19 +765,198 @@
         -->
         <div id="page8">
             <div class="page8-top">
-                <h2>Recent Works for Government of Odisha</h2>
-                
-            </div>
-            <div class="map-img">
+                <h2>Recent Works for <span><b>Government of Odisha</b></span></h2>
+                <div class="map-img">
                 <picture>
-                    <source srcset="images-webp/map-odisha-removebg-preview.webp" type="image/webp">
+                    <source srcset="images-webp/govtOdishaLogo.webp" type="image/webp">
                     
                     
-                    <img src="images/map-odisha-removebg-preview.png"  loading="lazy">
+                    <img src="images/govtOdishaLogo.png"  loading="lazy">
                 </picture>
                
             </div>
+            </div>
+            
             <div class="govt-works-outer">
+                <div class="govt-slider-out">
+                    <div class="carousel-govt-container">
+            <div class="carousel-govt-track" id="carousel-govtTrack">
+                <!-- Slide 1 -->
+                <div class="carousel-govt-slide">
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/govt5.webp" type="image/webp">
+                        
+                        
+                        <img src="images/govt5.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Government Award Ceremony</div>
+                            <div class="overlay-govt-description">Recognition event for outstanding service</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/govt2.webp" type="image/webp">
+                        
+                        
+                        <img src="images/govt2.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Cultural Heritage Festival</div>
+                            <div class="overlay-govt-description">Celebrating Odisha's rich cultural traditions</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/OMC cover.webp" type="image/webp">
+                        
+                        
+                        <img src="images/OMC cover.jpeg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Odisha Mining Corporation</div>
+                            <div class="overlay-govt-description">Celebrating progress with tradition and purpose</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/kalinga-asia.webp" type="image/webp">
+                        
+                        
+                        <img src="images/kalinga-asia.jpeg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">International conference</div>
+                            <div class="overlay-govt-description">Kalinga and Southeast Asia: The civilisation Connect</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-govt-slide">
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/govt4.webp" type="image/webp">
+                        
+                        
+                        <img src="images/govt4.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Youth Empowerment Program</div>
+                            <div class="overlay-govt-description">Skill development initiative for young citizens</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/govt6.webp" type="image/webp">
+                        
+                        
+                        <img src="images/govt6.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Infrastructure Launch</div>
+                            <div class="overlay-govt-description">New government facility inauguration</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                       <picture>
+                        <source srcset="images-webp/govt8.webp" type="image/webp">
+                        
+                        
+                        <img src="images/govt8.jpeg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Traditional Ceremony</div>
+                            <div class="overlay-govt-description">Preserving cultural values and traditions</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/recent-works1.webp" type="image/webp">
+                        <source srcset="images-webp/recent-works1.avif" type="image/avif">
+                        
+                        <img src="images/recent-works1.png" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Government Complex</div>
+                            <div class="overlay-govt-description">Modern administrative facility opening</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-govt-slide">
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/cultural7.webp" type="image/webp">
+                        
+                        
+                        <img src="images/cultural7.jpeg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Cultural Festival</div>
+                            <div class="overlay-govt-description">Promoting local artists </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/govt3.webp" type="image/webp">
+                        
+                        
+                        <img src="images/govt3.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Public Awareness Rally</div>
+                            <div class="overlay-govt-description">Community engagement and awareness campaign</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/mega2.webp" type="image/webp">
+                        
+                        
+                        <img src="images/mega2.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Odisha Police Honors Ceremony</div>
+                            <div class="overlay-govt-description">Leadership, Service & Public Excellence</div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <picture>
+                        <source srcset="images-webp/rabindra4.webp" type="image/webp">
+                        
+                        
+                        <img src="images/rabindra4.jpg" alt="" loading="lazy">
+                        </picture>
+                        <div class="grid-item-overlay-govt">
+                            <div class="overlay-govt-title">Digital Initiative Launch</div>
+                            <div class="overlay-govt-description">Technology adoption for better governance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-govt-nav prev" id="prevBtn-govt">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            <button class="carousel-govt-nav next" id="nextBtn-govt">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="carousel-govt-indicator" id="indicator-govts">
+            <div class="indicator-govt active" data-slide="0"></div>
+            <div class="indicator-govt" data-slide="1"></div>
+            <div class="indicator-govt" data-slide="2"></div>
+        </div>
+                </div>
+                <!--
                 <div class="govt-works">
                     <picture>
                         <source srcset="images-webp/govt5.webp" type="image/webp">
@@ -743,15 +1033,15 @@
                     </picture>
                     
                 </div>
-                
+                -->
                 
                 
             </div>
-            <picture>
+            <picture >
                 <source srcset="images-webp/dhol.webp" type="image/webp">
                 
                 
-                <img src="images/dhol.png" id="dhol-img" loading="lazy">
+                <img src="images/dhol.png" id="dhol-img" loading="lazy" style="display: none;" >
             </picture>
             
         </div>

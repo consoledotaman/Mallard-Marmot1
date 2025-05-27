@@ -53,6 +53,45 @@ function menuAnimation() {
     });
 }
 menuAnimation();
+
+// Get the navbar element
+const navBar = document.querySelector('.nav-bar');
+
+// Define scroll range (adjust this value to control how much scroll is needed)
+const scrollRange = 200; // pixels to complete the transition
+
+// Function to handle scroll events
+function handleScroll() {
+  const scrollY = window.scrollY;
+  
+  // Calculate progress (0 to 1) based on scroll position
+  let progress = Math.min(scrollY / scrollRange, 1);
+  
+  // Interpolate values based on progress
+  const width = 90 + (10 * progress); // 90% to 100%
+  const height = 12 - (3 * progress); // 12vmin to 9vmin
+  const marginTop = 2 - (2 * progress); // 2vw to 0vw
+  const borderRadius = 20 - (20 * progress); // 20px to 0px
+  
+  // Apply interpolated styles
+  navBar.style.width = width + '%';
+  navBar.style.height = height + 'vmin';
+  navBar.style.marginTop = marginTop + 'vw';
+  navBar.style.borderRadius = borderRadius + 'px';
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+// Optional: Add smooth transition in CSS for better UX
+// You can add this to your CSS file:
+/*
+.nav-bar {
+  transition: all 0.3s ease;
+}
+*/
+
+
 window.addEventListener('beforeunload', () => {
     sessionStorage.setItem('scrollPosition', window.scrollY);
     sessionStorage.setItem('currentPage', window.location.pathname); 
