@@ -606,7 +606,7 @@ nav img{
 }
 .page3-top{
     display: flex;
-    width:85vw;
+    width:95vw;
     height:auto;
     align-items: center;
     justify-content: center;
@@ -614,7 +614,7 @@ nav img{
     
     background-color: #000;
     border-radius:2.4vw;
-    margin-left:7.5vw;
+    margin-left:2.5vw;
     
 }
 .page3-top h2{
@@ -711,7 +711,7 @@ nav img{
 
 #page4{
     width:100vw;
-    height:45vw;
+    height:50vw;
     background-color: #f5f5f5;
     position:relative;
 }
@@ -721,12 +721,12 @@ nav img{
 
 #slide-container{
     height:40vw;
-    width:80%;
+    width:85%;
     
     
     position: absolute;
     
-    left:12%;
+    left:7.5%;
     top:50%;
     transform: translate(0%,-50%);
 
@@ -749,7 +749,7 @@ nav img{
     width:35vw;
     overflow: hidden;
     bottom:20vw;
-    left:-10%;
+    left:-6%;
     z-index:12;
     position: absolute;
    

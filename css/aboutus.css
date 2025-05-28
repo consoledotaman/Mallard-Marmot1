@@ -465,6 +465,9 @@ nav img{
     right:0;
     margin:1vw;
 }
+.social-about a{
+    text-decoration: none;
+}
 .socialicons-about {
     height:3vw;
     width:3vw;
